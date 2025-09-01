@@ -99,7 +99,7 @@ Variables CSS complètes pour le système de design
 ## 🔗 LIENS CORRIGÉS
 
 ### 🌐 Preview URL
-**Dashboard Placeholder** : https://handshake-dash.preview.emergentagent.com/dashboard
+**Dashboard Placeholder** : https://placeholderdash.preview.emergentagent.com/dashboard
 
 ### 📁 Fichiers Critiques
 - **Composant principal** : `/app/frontend/src/components/HandshakeDashboard.jsx`
