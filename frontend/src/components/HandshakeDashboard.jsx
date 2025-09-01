@@ -613,35 +613,35 @@ export default function HandshakeDashboard() {
           className="hidden xl:block w-80 bg-black/30 backdrop-blur-sm border-l border-gray-800/50 p-4"
         >
           <div className="space-y-6">
-            {/* Métriques du haut */}
+            {/* Métriques PLACEHOLDER */}
             <div>
               <div className="grid grid-cols-2 gap-3 mb-4">
                 <div className="text-center">
-                  <p className="text-2xl font-bold text-white">0</p>
-                  <p className="text-xs text-gray-400">Overall</p>
+                  <p className="text-2xl font-bold text-gray-400">{placeholderData.metrics.overall}</p>
+                  <p className="text-xs text-gray-500">Overall</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-2xl font-bold text-blue-400">0</p>
-                  <p className="text-xs text-gray-400">Prestige</p>
+                  <p className="text-2xl font-bold text-gray-400">{placeholderData.metrics.prestige}</p>
+                  <p className="text-xs text-gray-500">Prestige</p>
                 </div>
               </div>
               
               <div className="grid grid-cols-4 gap-2 text-center text-xs">
                 <div>
-                  <p className="text-green-400 font-bold">0%</p>
-                  <p className="text-gray-500">Success</p>
+                  <p className="text-gray-400 font-bold">{placeholderData.metrics.success}</p>
+                  <p className="text-gray-500">Métrique A</p>
                 </div>
                 <div>
-                  <p className="text-blue-400 font-bold">0%</p>
-                  <p className="text-gray-500">Progress</p>
+                  <p className="text-gray-400 font-bold">{placeholderData.metrics.progress}</p>
+                  <p className="text-gray-500">Métrique B</p>
                 </div>
                 <div>
-                  <p className="text-yellow-400 font-bold">0%</p>
-                  <p className="text-gray-500">Innovation</p>
+                  <p className="text-gray-400 font-bold">{placeholderData.metrics.innovation}</p>
+                  <p className="text-gray-500">Métrique C</p>
                 </div>
                 <div>
-                  <p className="text-purple-400 font-bold">0%</p>
-                  <p className="text-gray-500">Impact</p>
+                  <p className="text-gray-400 font-bold">{placeholderData.metrics.impact}</p>
+                  <p className="text-gray-500">Métrique D</p>
                 </div>
               </div>
             </div>
