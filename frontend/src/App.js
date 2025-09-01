@@ -50,13 +50,22 @@ function testBackend() {
 }
 
 function App() {
+  useEffect(() => {
+    console.log("🚀 App Started");
+    console.log("Backend URL:", BACKEND_URL);
+    console.log("API URL:", API);
+    testBackend();
+  }, []);
+
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HandshakeClone />} />
-          <Route path="/dashboard" element={<HandshakeClone />} />
-          <Route path="/old-dashboard" element={<HandshakeDashboard />} />
+          <Route path="/" element={<ModularDashboard />} />
+          <Route path="/dashboard" element={<ModularDashboard />} />
+          <Route path="/clone" element={<HandshakeClone />} />
+          <Route path="/original" element={<HandshakeDashboard />} />
+          <Route path="/home" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </div>
