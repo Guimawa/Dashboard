@@ -29,6 +29,26 @@ function Home() {
   );
 }
 
+function testBackend() {
+  axios
+    .get(`${API}/health`)
+    .then((response) => {
+      console.log("✅ Backend Connected");
+      console.log("Response:", response.data);
+    })
+    .catch((error) => {
+      console.log("❌ Backend Connection Failed");
+      if (error.response) {
+        console.log("Response status:", error.response.status);
+        console.log("Response data:", error.response.data);
+      } else if (error.request) {
+        console.log("No response received:", error.request);
+      } else {
+        console.log("Request setup error:", error.message);
+      }
+    });
+}
+
 function App() {
   return (
     <div className="App">
