@@ -1,0 +1,142 @@
+{
+  "dashboard": {
+    "title": "Dashboard Placeholder",
+    "subtitle": "Gestion Projets",
+    "user": {
+      "name": "Utilisateur",
+      "role": "Manager",
+      "avatar": ""
+    }
+  },
+  "network": {
+    "nodes": [
+      {
+        "id": "central",
+        "x": 200,
+        "y": 150,
+        "r": 35,
+        "color": "#00BFFF",
+        "label": ""
+      },
+      {
+        "id": "node-1",
+        "x": 120,
+        "y": 80,
+        "r": 28,
+        "color": "#10B981",
+        "label": ""
+      },
+      {
+        "id": "node-2", 
+        "x": 280,
+        "y": 80,
+        "r": 26,
+        "color": "#F59E0B",
+        "label": ""
+      },
+      {
+        "id": "node-3",
+        "x": 320,
+        "y": 150,
+        "r": 30,
+        "color": "#EF4444",
+        "label": ""
+      }
+    ],
+    "links": [
+      {
+        "source": "central",
+        "target": "node-1",
+        "weight": 0
+      },
+      {
+        "source": "central", 
+        "target": "node-2",
+        "weight": 0
+      },
+      {
+        "source": "central",
+        "target": "node-3", 
+        "weight": 0
+      }
+    ]
+  },
+  "metrics": {
+    "overall": 0,
+    "prestige": 0,
+    "success": "0%",
+    "progress": "0%", 
+    "innovation": "0%",
+    "impact": "0%"
+  },
+  "projects": {
+    "recent": [
+      {
+        "id": 1,
+        "name": "Projet Exemple 1",
+        "status": "placeholder",
+        "description": "Description vide"
+      },
+      {
+        "id": 2,
+        "name": "Projet Exemple 2", 
+        "status": "placeholder",
+        "description": "Description vide"
+      }
+    ]
+  },
+  "ranking": [
+    {
+      "id": 1,
+      "name": "Personne 1",
+      "score": "XX.XX%",
+      "status": "placeholder",
+      "color": "text-gray-400"
+    },
+    {
+      "id": 2,
+      "name": "Personne 2",
+      "score": "XX.XX%", 
+      "status": "placeholder",
+      "color": "text-gray-400"
+    },
+    {
+      "id": 3,
+      "name": "Personne 3",
+      "score": "XX.XX%",
+      "status": "placeholder", 
+      "color": "text-gray-400"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Service API 1",
+      "status": "non-configuré",
+      "icon": ""
+    },
+    {
+      "name": "Service API 2", 
+      "status": "non-configuré",
+      "icon": ""
+    },
+    {
+      "name": "Service API 3",
+      "status": "non-configuré",
+      "icon": ""
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "title": "Notification 1",
+      "description": "Placeholder notification",
+      "timestamp": "01-01-20XX"
+    },
+    {
+      "id": 2,
+      "title": "Notification 2",
+      "description": "Placeholder notification", 
+      "timestamp": "01-01-20XX"
+    }
+  ]
+}
