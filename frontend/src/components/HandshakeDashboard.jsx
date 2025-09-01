@@ -432,11 +432,11 @@ export default function HandshakeDashboard() {
             </Button>
           </div>
 
-          {/* User info */}
+          {/* User info PLACEHOLDER */}
           <div className="flex items-center space-x-3">
             <div className="text-right hidden sm:block">
-              <p className="text-white text-sm font-medium">Admin User</p>
-              <p className="text-gray-400 text-xs">Project Manager</p>
+              <p className="text-white text-sm font-medium">Utilisateur</p>
+              <p className="text-gray-400 text-xs">Rôle Placeholder</p>
             </div>
             <div className="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center">
               <User className="h-4 w-4" />
