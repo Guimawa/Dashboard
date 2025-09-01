@@ -685,17 +685,17 @@ export default function HandshakeDashboard() {
               </div>
             </div>
 
-            {/* Ranking */}
+            {/* Ranking DENSE comme Handshake */}
             <div>
               <h3 className="text-white font-medium mb-3">Influence Ranking</h3>
-              <div className="space-y-1">
+              <div className="space-y-1 max-h-96 overflow-y-auto">
                 {rankingData.map((item, i) => (
-                  <div key={i} className="flex items-center justify-between p-2 bg-black/30 rounded text-sm">
+                  <div key={i} className="flex items-center justify-between p-2 bg-black/30 rounded text-sm hover:bg-black/40">
                     <div className="flex items-center space-x-2">
-                      <span className="text-gray-400 text-xs">#{i + 1}</span>
-                      <span className="text-gray-300">{item.name}</span>
+                      <span className="text-gray-400 text-xs w-6">#{i + 1}</span>
+                      <span className="text-gray-300 text-xs">{item.name}</span>
                     </div>
-                    <span className="text-gray-500 text-xs">{item.score}</span>
+                    <span className={`text-xs font-medium ${item.color}`}>{item.score}</span>
                   </div>
                 ))}
               </div>
