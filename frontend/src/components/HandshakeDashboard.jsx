@@ -317,14 +317,28 @@ export default function HandshakeDashboard() {
     ]
   };
 
-  // Données vides pour le ranking (placeholders)
+  // Données DENSES pour le ranking (comme vrai Handshake)
   const rankingData = [
-    { name: 'Projet Alpha', score: '0.0%', status: 'empty' },
-    { name: 'Projet Beta', score: '0.0%', status: 'empty' },
-    { name: 'Projet Gamma', score: '0.0%', status: 'empty' },
-    { name: 'Projet Delta', score: '0.0%', status: 'empty' },
-    { name: 'Projet Epsilon', score: '0.0%', status: 'empty' },
-    { name: 'Projet Zeta', score: '0.0%', status: 'empty' }
+    { name: 'Michael Nelson', score: '34.27%', status: 'positive', color: 'text-green-400' },
+    { name: 'Christopher Lee', score: '28.15%', status: 'negative', color: 'text-red-400' },
+    { name: 'Jessica Packett', score: '26.33%', status: 'positive', color: 'text-green-400' },
+    { name: 'Matthew Song', score: '24.28%', status: 'positive', color: 'text-green-400' },
+    { name: 'Ashley Hamilton', score: '22.06%', status: 'negative', color: 'text-red-400' },
+    { name: 'Jennifer Bender', score: '21.67%', status: 'positive', color: 'text-green-400' },
+    { name: 'Joshua Wagner', score: '20.89%', status: 'negative', color: 'text-red-400' },
+    { name: 'Amanda McLaughlin', score: '19.42%', status: 'positive', color: 'text-green-400' },
+    { name: 'Daniel McNamara', score: '18.55%', status: 'negative', color: 'text-red-400' },
+    { name: 'David Raynor', score: '17.91%', status: 'negative', color: 'text-red-400' },
+    { name: 'James Nixon', score: '16.25%', status: 'negative', color: 'text-red-400' },
+    { name: 'Robert Woolard', score: '15.67%', status: 'positive', color: 'text-green-400' },
+    { name: 'John Desai', score: '14.12%', status: 'negative', color: 'text-red-400' },
+    { name: 'Joseph Wallace', score: '13.75%', status: 'negative', color: 'text-red-400' },
+    { name: 'Andrew Lawrence', score: '12.23%', status: 'positive', color: 'text-green-400' },
+    { name: 'Ryan Griffin', score: '11.44%', status: 'negative', color: 'text-red-400' },
+    { name: 'Brandon Dougherty', score: '10.95%', status: 'negative', color: 'text-red-400' },
+    { name: 'Jason Powers', score: '10.16%', status: 'positive', color: 'text-green-400' },
+    { name: 'Justin May', score: '9.28%', status: 'positive', color: 'text-green-400' },
+    { name: 'Sarah Steele', score: '8.19%', status: 'negative', color: 'text-red-400' }
   ];
 
   return (
