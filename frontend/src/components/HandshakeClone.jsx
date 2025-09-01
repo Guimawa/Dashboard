@@ -187,31 +187,20 @@ export default function HandshakeClone() {
         <ForceGraph2D
           ref={fgRef}
           graphData={graphData}
-          nodeRelSize={4}
+          width={800}
+          height={400}
+          nodeRelSize={6}
           nodeVal={(n) => n.size}
+          nodeColor={(n) => n.color}
           linkColor={() => 'rgba(255,255,255,0.15)'}
           linkWidth={() => 1}
           onNodeClick={handleNodeClick}
           onNodeHover={handleNodeHover}
           enableZoomPanInteraction={true}
           enableNodeDrag={false}
-          nodeCanvasObject={(node, ctx, globalScale) => {
-            const size = node.size;
-            // Outer glow
-            ctx.save();
-            ctx.shadowColor = node.color;
-            ctx.shadowBlur = selected && selected.id === node.id ? 20 : 10;
-            ctx.beginPath();
-            ctx.arc(node.x, node.y, size, 0, 2 * Math.PI, false);
-            ctx.fillStyle = 'rgba(255,255,255,0.04)';
-            ctx.fill();
-            ctx.restore();
-            // Core
-            ctx.beginPath();
-            ctx.arc(node.x, node.y, size - 2, 0, 2 * Math.PI, false);
-            ctx.fillStyle = node.color;
-            ctx.fill();
-          }}
+          backgroundColor="transparent"
+          warmupTicks={100}
+          cooldownTicks={100}
         />
         {/* Tooltip */}
         {hoverNode && (
