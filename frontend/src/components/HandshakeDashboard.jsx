@@ -491,12 +491,12 @@ export default function HandshakeDashboard() {
             <div>
               <h3 className="text-white font-medium mb-3">Projets Récents</h3>
               <div className="space-y-2">
-                {[1,2,3,4,5].map(i => (
+                {placeholderData.projects.recent.map((project, i) => (
                   <div key={i} className="flex items-center space-x-3 p-2 rounded hover:bg-gray-800/30 cursor-pointer">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                    <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
                     <div className="flex-1">
-                      <p className="text-gray-300 text-sm">Projet Exemple {i}</p>
-                      <p className="text-gray-500 text-xs">Aucun projet créé</p>
+                      <p className="text-gray-400 text-sm">{project.name}</p>
+                      <p className="text-gray-500 text-xs">{project.description}</p>
                     </div>
                   </div>
                 ))}
@@ -506,10 +506,10 @@ export default function HandshakeDashboard() {
             <div>
               <h3 className="text-white font-medium mb-3">Notifications</h3>
               <div className="space-y-2">
-                {[1,2,3].map(i => (
+                {placeholderData.notifications.map((notif, i) => (
                   <div key={i} className="p-2 bg-gray-800/20 rounded text-xs">
-                    <p className="text-gray-400">Notification {i}</p>
-                    <p className="text-gray-500">Aucune notification</p>
+                    <p className="text-gray-400">{notif.title}</p>
+                    <p className="text-gray-500">{notif.description}</p>
                   </div>
                 ))}
               </div>
