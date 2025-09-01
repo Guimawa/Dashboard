@@ -9,7 +9,7 @@ export default function HandshakeDashboard(){
   const [selection,setSelection]=useState(null)
 
   return (
-    <div style={{height:'100vh',display:'grid',gridTemplateColumns:'280px 1fr 360px',gridTemplateRows:'auto 1fr auto'}}>
+    <div style={{height:'100vh',display:'grid',gridTemplateColumns:'240px 1fr 300px',gridTemplateRows:'auto 1fr auto'}}>
       {/* Sidebar (static placeholders) */}
       <aside style={{borderRight:'1px solid rgba(255,255,255,.08)',background:'rgba(255,255,255,.04)'}}>
         <div style={{padding:14}}>
