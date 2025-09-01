@@ -58,8 +58,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/dashboard" element={<HandshakeDashboard />} />
+          <Route path="/" element={<HandshakeClone />} />
+          <Route path="/dashboard" element={<HandshakeClone />} />
+          <Route path="/old-dashboard" element={<HandshakeDashboard />} />
         </Routes>
       </BrowserRouter>
     </div>
