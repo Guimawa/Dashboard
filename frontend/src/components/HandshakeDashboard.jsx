@@ -655,27 +655,27 @@ export default function HandshakeDashboard() {
               </div>
             </div>
 
-            {/* My Topics */}
+            {/* Mes Projets PLACEHOLDER */}
             <div>
               <h3 className="text-white font-medium mb-3">Mes Projets</h3>
               <div className="space-y-2">
-                {['Développement Web', 'Design UI/UX', 'Marketing Digital', 'Analytics', 'DevOps'].map((topic, i) => (
+                {['Catégorie A', 'Catégorie B', 'Catégorie C', 'Catégorie D', 'Catégorie E'].map((category, i) => (
                   <div key={i} className="flex justify-between text-sm">
-                    <span className="text-gray-300">{topic}</span>
+                    <span className="text-gray-400">{category}</span>
                     <span className="text-gray-500">0%</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* My Connections */}
+            {/* Mes Outils PLACEHOLDER */}
             <div>
               <h3 className="text-white font-medium mb-3">Mes Outils</h3>
               <div className="space-y-2">
-                {['GitHub', 'Figma', 'Notion', 'YouTube', 'Analytics'].map((tool, i) => (
+                {['Outil A', 'Outil B', 'Outil C', 'Outil D', 'Outil E'].map((tool, i) => (
                   <div key={i} className="flex items-center space-x-2">
                     <div className="w-6 h-6 bg-gray-600 rounded-full"></div>
-                    <span className="text-gray-300 text-sm">{tool}</span>
+                    <span className="text-gray-400 text-sm">{tool}</span>
                   </div>
                 ))}
               </div>
