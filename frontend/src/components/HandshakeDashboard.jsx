@@ -581,12 +581,12 @@ export default function HandshakeDashboard() {
                   </Group>
                 </svg>
                 
-                {/* Invite centrale */}
+                {/* Invite centrale PLACEHOLDER */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                   <div className="text-center">
-                    <p className="text-gray-300 mb-3">Crée un nouveau projet</p>
-                    <Button className="pointer-events-auto bg-blue-600 hover:bg-blue-700">
-                      Commencer
+                    <p className="text-gray-400 mb-3">Invite placeholder</p>
+                    <Button className="pointer-events-auto bg-blue-600 hover:bg-blue-700" disabled>
+                      Action placeholder
                     </Button>
                   </div>
                 </div>
