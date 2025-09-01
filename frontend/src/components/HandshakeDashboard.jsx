@@ -5,21 +5,22 @@ import { Group } from '@visx/group';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import { Button } from './ui/button';
 import { Bell, Menu, Filter, Calendar, Wrench, ChevronDown, Star, Share, Info, User, Settings } from 'lucide-react';
+import placeholderData from '../data/sample-placeholder.json';
 
-// Couleurs exactes du design Handshake
+// Couleurs du design (identiques mais sans données réelles)
 const networkColors = {
-  central: '#00BFFF',     // Bleu cyan central
-  node1: '#10B981',       // Vert
-  node2: '#F59E0B',       // Orange/Jaune  
-  node3: '#EF4444',       // Rouge
-  node4: '#8B5CF6',       // Violet
-  node5: '#06B6D4',       // Cyan
-  node6: '#F97316',       // Orange
-  node7: '#84CC16',       // Lime
-  node8: '#EC4899'        // Pink
+  central: '#00BFFF',
+  node1: '#10B981',
+  node2: '#F59E0B', 
+  node3: '#EF4444',
+  node4: '#8B5CF6',
+  node5: '#06B6D4',
+  node6: '#F97316',
+  node7: '#84CC16',
+  node8: '#EC4899'
 };
 
-// Onglets sidebar (adaptés au projet)
+// Onglets avec contenu PLACEHOLDER uniquement
 const sidebarTabs = [
   { 
     name: 'New Projet', 
@@ -28,19 +29,23 @@ const sidebarTabs = [
       <div className="space-y-6">
         <div className="text-center">
           <h3 className="text-xl font-semibold text-white mb-2">Créer un Nouveau Projet</h3>
-          <p className="text-gray-400 text-sm">Formulaire vide pour initialiser un projet</p>
+          <p className="text-gray-400 text-sm">Formulaire vide - placeholder</p>
         </div>
         <div className="space-y-4">
           <div className="bg-slate-800/30 rounded-lg p-4">
             <p className="text-gray-300 text-sm mb-2">Nom du projet</p>
-            <div className="w-full h-10 bg-slate-700/50 rounded border border-gray-600"></div>
+            <div className="w-full h-10 bg-slate-700/50 rounded border border-gray-600 flex items-center px-3">
+              <span className="text-gray-500 text-sm">Placeholder nom...</span>
+            </div>
           </div>
           <div className="bg-slate-800/30 rounded-lg p-4">
             <p className="text-gray-300 text-sm mb-2">Description</p>
-            <div className="w-full h-20 bg-slate-700/50 rounded border border-gray-600"></div>
+            <div className="w-full h-20 bg-slate-700/50 rounded border border-gray-600 flex items-center px-3">
+              <span className="text-gray-500 text-sm">Placeholder description...</span>
+            </div>
           </div>
-          <Button className="w-full bg-blue-600 hover:bg-blue-700">
-            Créer le projet
+          <Button className="w-full bg-blue-600 hover:bg-blue-700" disabled>
+            Créer le projet (placeholder)
           </Button>
         </div>
       </div>
@@ -53,30 +58,30 @@ const sidebarTabs = [
       <div className="space-y-6">
         <div className="text-center">
           <h3 className="text-xl font-semibold text-white mb-2">Brainstorm Multi-IA</h3>
-          <p className="text-gray-400 text-sm">Zone de saisie vide pour idées et synthèse IA</p>
+          <p className="text-gray-400 text-sm">Zone placeholder pour idées</p>
         </div>
         <div className="bg-slate-800/30 rounded-lg p-4">
-          <p className="text-gray-300 text-sm mb-2">Décris ton idée ou problème</p>
+          <p className="text-gray-300 text-sm mb-2">Saisie idée</p>
           <div className="w-full h-32 bg-slate-700/50 rounded border border-gray-600 flex items-center justify-center">
-            <p className="text-gray-500 text-sm">Commence par écrire ton idée ici...</p>
+            <p className="text-gray-500 text-sm">Zone texte placeholder...</p>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-3">
           <div className="bg-slate-800/30 rounded p-3 text-center">
-            <p className="text-xs text-gray-400">GPT-4 Response</p>
-            <p className="text-gray-500 text-xs mt-1">Vide</p>
+            <p className="text-xs text-gray-400">IA Service 1</p>
+            <p className="text-gray-500 text-xs mt-1">Réponse placeholder</p>
           </div>
           <div className="bg-slate-800/30 rounded p-3 text-center">
-            <p className="text-xs text-gray-400">Claude Response</p>
-            <p className="text-gray-500 text-xs mt-1">Vide</p>
+            <p className="text-xs text-gray-400">IA Service 2</p>
+            <p className="text-gray-500 text-xs mt-1">Réponse placeholder</p>
           </div>
           <div className="bg-slate-800/30 rounded p-3 text-center">
-            <p className="text-xs text-gray-400">Gemini Response</p>
-            <p className="text-gray-500 text-xs mt-1">Vide</p>
+            <p className="text-xs text-gray-400">IA Service 3</p>
+            <p className="text-gray-500 text-xs mt-1">Réponse placeholder</p>
           </div>
           <div className="bg-slate-800/30 rounded p-3 text-center">
             <p className="text-xs text-gray-400">Synthèse</p>
-            <p className="text-gray-500 text-xs mt-1">Vide</p>
+            <p className="text-gray-500 text-xs mt-1">Placeholder</p>
           </div>
         </div>
       </div>
@@ -88,18 +93,18 @@ const sidebarTabs = [
     content: (
       <div className="space-y-6">
         <div className="text-center">
-          <h3 className="text-xl font-semibold text-white mb-2">Coffre-fort Sécurisé</h3>
-          <p className="text-gray-400 text-sm">Stockage chiffré AES pour clés API/mots de passe</p>
+          <h3 className="text-xl font-semibold text-white mb-2">Coffre-fort</h3>
+          <p className="text-gray-400 text-sm">Stockage placeholder pour clés</p>
         </div>
         <div className="space-y-3">
-          {['OpenAI API', 'GitHub Token', 'Figma Token', 'Notion API', 'YouTube API'].map((service, i) => (
+          {placeholderData.tools.map((service, i) => (
             <div key={i} className="bg-slate-800/30 rounded-lg p-3 flex justify-between items-center">
               <div>
-                <p className="text-gray-300 text-sm">{service}</p>
-                <p className="text-gray-500 text-xs">Non configuré</p>
+                <p className="text-gray-300 text-sm">{service.name}</p>
+                <p className="text-gray-500 text-xs">Placeholder - non configuré</p>
               </div>
-              <Button variant="outline" size="sm" className="text-xs">
-                Ajouter
+              <Button variant="outline" size="sm" className="text-xs" disabled>
+                Placeholder
               </Button>
             </div>
           ))}
@@ -114,31 +119,31 @@ const sidebarTabs = [
       <div className="space-y-6">
         <div className="text-center">
           <h3 className="text-xl font-semibold text-white mb-2">Statuts Projets</h3>
-          <p className="text-gray-400 text-sm">Vue globale : en cours/bloqué/terminé</p>
+          <p className="text-gray-400 text-sm">Vue globale placeholder</p>
         </div>
         <div className="grid grid-cols-3 gap-3">
-          <div className="bg-green-900/30 border border-green-700/50 rounded-lg p-3 text-center">
-            <p className="text-green-400 text-2xl font-bold">0</p>
-            <p className="text-green-300 text-xs">En cours</p>
+          <div className="bg-gray-900/30 border border-gray-700/50 rounded-lg p-3 text-center">
+            <p className="text-gray-400 text-2xl font-bold">0</p>
+            <p className="text-gray-500 text-xs">En cours</p>
           </div>
-          <div className="bg-yellow-900/30 border border-yellow-700/50 rounded-lg p-3 text-center">
-            <p className="text-yellow-400 text-2xl font-bold">0</p>
-            <p className="text-yellow-300 text-xs">Bloqués</p>
+          <div className="bg-gray-900/30 border border-gray-700/50 rounded-lg p-3 text-center">
+            <p className="text-gray-400 text-2xl font-bold">0</p>
+            <p className="text-gray-500 text-xs">Bloqués</p>
           </div>
-          <div className="bg-blue-900/30 border border-blue-700/50 rounded-lg p-3 text-center">
-            <p className="text-blue-400 text-2xl font-bold">0</p>
-            <p className="text-blue-300 text-xs">Terminés</p>
+          <div className="bg-gray-900/30 border border-gray-700/50 rounded-lg p-3 text-center">
+            <p className="text-gray-400 text-2xl font-bold">0</p>
+            <p className="text-gray-500 text-xs">Terminés</p>
           </div>
         </div>
         <div className="space-y-2">
-          {[1,2,3].map(i => (
+          {placeholderData.projects.recent.map((project, i) => (
             <div key={i} className="bg-slate-800/30 rounded p-3 flex justify-between">
               <div>
-                <p className="text-gray-300 text-sm">Projet {i}</p>
-                <p className="text-gray-500 text-xs">Aucun projet créé</p>
+                <p className="text-gray-400 text-sm">{project.name}</p>
+                <p className="text-gray-500 text-xs">{project.description}</p>
               </div>
               <div className="text-gray-500 text-xs">
-                Status: Vide
+                Status: {project.status}
               </div>
             </div>
           ))}
@@ -152,26 +157,26 @@ const sidebarTabs = [
     content: (
       <div className="space-y-6">
         <div className="text-center">
-          <h3 className="text-xl font-semibold text-white mb-2">Analytics & Métriques</h3>
-          <p className="text-gray-400 text-sm">Graphs dynamiques vues/users, export PDF/CSV</p>
+          <h3 className="text-xl font-semibold text-white mb-2">Analytics</h3>
+          <p className="text-gray-400 text-sm">Métriques placeholder</p>
         </div>
         <div className="bg-slate-800/30 rounded-lg p-4">
           <p className="text-gray-300 text-sm mb-3">Performance Overview</p>
           <div className="w-full h-32 bg-slate-700/30 rounded flex items-center justify-center">
             <div className="text-center">
-              <p className="text-gray-500 text-sm">Graph vide</p>
-              <p className="text-gray-600 text-xs">Connectez vos données</p>
+              <p className="text-gray-500 text-sm">Graph placeholder</p>
+              <p className="text-gray-600 text-xs">Données vides</p>
             </div>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-3">
           <div className="bg-slate-800/30 rounded p-3 text-center">
-            <p className="text-gray-400 text-xs">Vues YouTube</p>
-            <p className="text-white text-lg font-bold">0</p>
+            <p className="text-gray-400 text-xs">Métrique A</p>
+            <p className="text-gray-500 text-lg font-bold">0</p>
           </div>
           <div className="bg-slate-800/30 rounded p-3 text-center">
-            <p className="text-gray-400 text-xs">Users Actifs</p>
-            <p className="text-white text-lg font-bold">0</p>
+            <p className="text-gray-400 text-xs">Métrique B</p>
+            <p className="text-gray-500 text-lg font-bold">0</p>
           </div>
         </div>
       </div>
