@@ -313,28 +313,28 @@ export default function HandshakeDashboard() {
     ]
   };
 
-  // Données DENSES pour le ranking (comme vrai Handshake)
+  // Données PLACEHOLDER pour le ranking (même densité mais anonymisées)
   const rankingData = [
-    { name: 'Michael Nelson', score: '34.27%', status: 'positive', color: 'text-green-400' },
-    { name: 'Christopher Lee', score: '28.15%', status: 'negative', color: 'text-red-400' },
-    { name: 'Jessica Packett', score: '26.33%', status: 'positive', color: 'text-green-400' },
-    { name: 'Matthew Song', score: '24.28%', status: 'positive', color: 'text-green-400' },
-    { name: 'Ashley Hamilton', score: '22.06%', status: 'negative', color: 'text-red-400' },
-    { name: 'Jennifer Bender', score: '21.67%', status: 'positive', color: 'text-green-400' },
-    { name: 'Joshua Wagner', score: '20.89%', status: 'negative', color: 'text-red-400' },
-    { name: 'Amanda McLaughlin', score: '19.42%', status: 'positive', color: 'text-green-400' },
-    { name: 'Daniel McNamara', score: '18.55%', status: 'negative', color: 'text-red-400' },
-    { name: 'David Raynor', score: '17.91%', status: 'negative', color: 'text-red-400' },
-    { name: 'James Nixon', score: '16.25%', status: 'negative', color: 'text-red-400' },
-    { name: 'Robert Woolard', score: '15.67%', status: 'positive', color: 'text-green-400' },
-    { name: 'John Desai', score: '14.12%', status: 'negative', color: 'text-red-400' },
-    { name: 'Joseph Wallace', score: '13.75%', status: 'negative', color: 'text-red-400' },
-    { name: 'Andrew Lawrence', score: '12.23%', status: 'positive', color: 'text-green-400' },
-    { name: 'Ryan Griffin', score: '11.44%', status: 'negative', color: 'text-red-400' },
-    { name: 'Brandon Dougherty', score: '10.95%', status: 'negative', color: 'text-red-400' },
-    { name: 'Jason Powers', score: '10.16%', status: 'positive', color: 'text-green-400' },
-    { name: 'Justin May', score: '9.28%', status: 'positive', color: 'text-green-400' },
-    { name: 'Sarah Steele', score: '8.19%', status: 'negative', color: 'text-red-400' }
+    { name: 'Personne 1', score: 'XX.XX%', status: 'placeholder', color: 'text-gray-400' },
+    { name: 'Personne 2', score: 'XX.XX%', status: 'placeholder', color: 'text-gray-400' },
+    { name: 'Personne 3', score: 'XX.XX%', status: 'placeholder', color: 'text-gray-400' },
+    { name: 'Personne 4', score: 'XX.XX%', status: 'placeholder', color: 'text-gray-400' },
+    { name: 'Personne 5', score: 'XX.XX%', status: 'placeholder', color: 'text-gray-400' },
+    { name: 'Personne 6', score: 'XX.XX%', status: 'placeholder', color: 'text-gray-400' },
+    { name: 'Personne 7', score: 'XX.XX%', status: 'placeholder', color: 'text-gray-400' },
+    { name: 'Personne 8', score: 'XX.XX%', status: 'placeholder', color: 'text-gray-400' },
+    { name: 'Personne 9', score: 'XX.XX%', status: 'placeholder', color: 'text-gray-400' },
+    { name: 'Personne 10', score: 'XX.XX%', status: 'placeholder', color: 'text-gray-400' },
+    { name: 'Personne 11', score: 'XX.XX%', status: 'placeholder', color: 'text-gray-400' },
+    { name: 'Personne 12', score: 'XX.XX%', status: 'placeholder', color: 'text-gray-400' },
+    { name: 'Personne 13', score: 'XX.XX%', status: 'placeholder', color: 'text-gray-400' },
+    { name: 'Personne 14', score: 'XX.XX%', status: 'placeholder', color: 'text-gray-400' },
+    { name: 'Personne 15', score: 'XX.XX%', status: 'placeholder', color: 'text-gray-400' },
+    { name: 'Personne 16', score: 'XX.XX%', status: 'placeholder', color: 'text-gray-400' },
+    { name: 'Personne 17', score: 'XX.XX%', status: 'placeholder', color: 'text-gray-400' },
+    { name: 'Personne 18', score: 'XX.XX%', status: 'placeholder', color: 'text-gray-400' },
+    { name: 'Personne 19', score: 'XX.XX%', status: 'placeholder', color: 'text-gray-400' },
+    { name: 'Personne 20', score: 'XX.XX%', status: 'placeholder', color: 'text-gray-400' }
   ];
 
   return (
