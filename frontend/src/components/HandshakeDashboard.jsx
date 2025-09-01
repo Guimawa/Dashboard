@@ -452,7 +452,7 @@ export default function HandshakeDashboard() {
           </div>
 
           <Button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-1 text-sm">
-            Action
+            Placeholder
           </Button>
         </div>
       </motion.div>
