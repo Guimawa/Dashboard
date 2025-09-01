@@ -204,28 +204,116 @@ export default function HandshakeDashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isTaskbarOpen, setIsTaskbarOpen] = useState(false);
 
-  // Graph réseau identique au design Handshake mais avec contenu adapté
+  // Graph réseau DENSE comme vrai Handshake Influence (50+ nœuds)
   const networkData = {
     nodes: [
-      { id: 'central', x: 200, y: 150, r: 40, color: networkColors.central, label: 'Dashboard\nProjets' },
-      { id: 'idea', x: 120, y: 70, r: 25, color: networkColors.node1, label: 'Idées' },
-      { id: 'design', x: 280, y: 70, r: 25, color: networkColors.node2, label: 'Design' },
-      { id: 'dev', x: 320, y: 150, r: 28, color: networkColors.node3, label: 'Dev' },
-      { id: 'test', x: 280, y: 230, r: 22, color: networkColors.node4, label: 'Tests' },
-      { id: 'deploy', x: 200, y: 260, r: 26, color: networkColors.node5, label: 'Deploy' },
-      { id: 'analytics', x: 120, y: 230, r: 24, color: networkColors.node6, label: 'Analytics' },
-      { id: 'api', x: 80, y: 150, r: 20, color: networkColors.node7, label: 'APIs' },
-      { id: 'ai', x: 160, y: 100, r: 22, color: networkColors.node8, label: 'IA Tools' }
+      // Nœud central gros
+      { id: 'central', x: 200, y: 150, r: 35, color: networkColors.central, label: 'Dashboard Central' },
+      
+      // Nœuds principaux moyens (rayons du centre)
+      { id: 'web-dev', x: 120, y: 80, r: 28, color: networkColors.node1, label: 'Web Dev' },
+      { id: 'mobile-app', x: 280, y: 80, r: 26, color: networkColors.node2, label: 'Mobile App' },
+      { id: 'backend', x: 320, y: 150, r: 30, color: networkColors.node3, label: 'Backend' },
+      { id: 'database', x: 280, y: 220, r: 24, color: networkColors.node4, label: 'Database' },
+      { id: 'devops', x: 200, y: 260, r: 27, color: networkColors.node5, label: 'DevOps' },
+      { id: 'design-ui', x: 120, y: 220, r: 25, color: networkColors.node6, label: 'UI Design' },
+      { id: 'api-rest', x: 80, y: 150, r: 22, color: networkColors.node7, label: 'REST API' },
+      { id: 'ai-tools', x: 160, y: 100, r: 23, color: networkColors.node8, label: 'AI Tools' },
+      
+      // Nombreux petits nœuds satellites (comme vrai Handshake)
+      { id: 'react', x: 90, y: 50, r: 12, color: networkColors.node1, label: 'React' },
+      { id: 'vue', x: 150, y: 45, r: 10, color: networkColors.node1, label: 'Vue' },
+      { id: 'angular', x: 180, y: 60, r: 11, color: networkColors.node1, label: 'Angular' },
+      { id: 'nodejs', x: 340, y: 120, r: 14, color: networkColors.node3, label: 'Node.js' },
+      { id: 'python', x: 360, y: 180, r: 13, color: networkColors.node3, label: 'Python' },
+      { id: 'mongodb', x: 250, y: 250, r: 12, color: networkColors.node4, label: 'MongoDB' },
+      { id: 'postgresql', x: 310, y: 240, r: 11, color: networkColors.node4, label: 'PostgreSQL' },
+      { id: 'docker', x: 170, y: 280, r: 13, color: networkColors.node5, label: 'Docker' },
+      { id: 'kubernetes', x: 230, y: 290, r: 12, color: networkColors.node5, label: 'K8s' },
+      { id: 'figma', x: 90, y: 190, r: 11, color: networkColors.node6, label: 'Figma' },
+      { id: 'sketch', x: 140, y: 250, r: 9, color: networkColors.node6, label: 'Sketch' },
+      { id: 'openai', x: 130, y: 130, r: 13, color: networkColors.node8, label: 'OpenAI' },
+      { id: 'claude', x: 190, y: 120, r: 12, color: networkColors.node8, label: 'Claude' },
+      
+      // Plus de nœuds pour densité
+      { id: 'typescript', x: 50, y: 80, r: 10, color: networkColors.node1, label: 'TS' },
+      { id: 'javascript', x: 70, y: 110, r: 11, color: networkColors.node1, label: 'JS' },
+      { id: 'html', x: 40, y: 140, r: 8, color: networkColors.node1, label: 'HTML' },
+      { id: 'css', x: 60, y: 170, r: 9, color: networkColors.node1, label: 'CSS' },
+      { id: 'tailwind', x: 80, y: 200, r: 10, color: networkColors.node6, label: 'Tailwind' },
+      { id: 'bootstrap', x: 100, y: 260, r: 8, color: networkColors.node6, label: 'Bootstrap' },
+      { id: 'aws', x: 300, y: 50, r: 14, color: networkColors.node5, label: 'AWS' },
+      { id: 'gcp', x: 340, y: 80, r: 12, color: networkColors.node5, label: 'GCP' },
+      { id: 'azure', x: 370, y: 110, r: 11, color: networkColors.node5, label: 'Azure' },
+      { id: 'vercel', x: 380, y: 150, r: 10, color: networkColors.node5, label: 'Vercel' },
+      { id: 'netlify', x: 360, y: 200, r: 9, color: networkColors.node5, label: 'Netlify' },
+      { id: 'github', x: 330, y: 270, r: 12, color: networkColors.node7, label: 'GitHub' },
+      { id: 'gitlab', x: 290, y: 300, r: 10, color: networkColors.node7, label: 'GitLab' },
+      { id: 'notion', x: 50, y: 200, r: 11, color: networkColors.node8, label: 'Notion' },
+      { id: 'slack', x: 30, y: 170, r: 9, color: networkColors.node8, label: 'Slack' },
+      { id: 'discord', x: 40, y: 240, r: 8, color: networkColors.node8, label: 'Discord' },
+      { id: 'youtube', x: 220, y: 40, r: 12, color: networkColors.node2, label: 'YouTube' },
+      { id: 'tiktok', x: 250, y: 70, r: 10, color: networkColors.node2, label: 'TikTok' },
+      { id: 'instagram', x: 310, y: 40, r: 11, color: networkColors.node2, label: 'Instagram' },
+      { id: 'twitter', x: 350, y: 60, r: 9, color: networkColors.node2, label: 'Twitter' },
+      { id: 'linkedin', x: 380, y: 90, r: 10, color: networkColors.node2, label: 'LinkedIn' },
+      
+      // Nœuds périphériques pour plus de densité
+      { id: 'analytics', x: 20, y: 100, r: 8, color: networkColors.node3, label: 'Analytics' },
+      { id: 'seo', x: 30, y: 130, r: 7, color: networkColors.node3, label: 'SEO' },
+      { id: 'marketing', x: 15, y: 200, r: 9, color: networkColors.node2, label: 'Marketing' },
+      { id: 'copywriting', x: 35, y: 270, r: 7, color: networkColors.node2, label: 'Copy' },
+      { id: 'branding', x: 60, y: 300, r: 8, color: networkColors.node6, label: 'Brand' },
+      { id: 'logo-design', x: 100, y: 320, r: 6, color: networkColors.node6, label: 'Logo' },
+      { id: 'photography', x: 140, y: 310, r: 7, color: networkColors.node6, label: 'Photo' },
+      { id: 'video-edit', x: 200, y: 320, r: 8, color: networkColors.node2, label: 'Video' },
+      { id: 'animation', x: 260, y: 310, r: 7, color: networkColors.node2, label: 'Anim' },
+      { id: 'motion', x: 320, y: 300, r: 6, color: networkColors.node2, label: 'Motion' },
+      { id: 'testing', x: 380, y: 250, r: 9, color: networkColors.node4, label: 'Testing' },
+      { id: 'qa', x: 390, y: 200, r: 7, color: networkColors.node4, label: 'QA' },
+      { id: 'security', x: 385, y: 130, r: 8, color: networkColors.node4, label: 'Security' }
     ],
     links: [
-      { source: 'central', target: 'idea' },
-      { source: 'central', target: 'design' },
-      { source: 'central', target: 'dev' },
-      { source: 'central', target: 'test' },
-      { source: 'central', target: 'deploy' },
-      { source: 'central', target: 'analytics' },
-      { source: 'central', target: 'api' },
-      { source: 'central', target: 'ai' }
+      // Connexions du centre vers nœuds principaux
+      { source: 'central', target: 'web-dev' },
+      { source: 'central', target: 'mobile-app' },
+      { source: 'central', target: 'backend' },
+      { source: 'central', target: 'database' },
+      { source: 'central', target: 'devops' },
+      { source: 'central', target: 'design-ui' },
+      { source: 'central', target: 'api-rest' },
+      { source: 'central', target: 'ai-tools' },
+      
+      // Connexions des nœuds principaux vers satellites
+      { source: 'web-dev', target: 'react' },
+      { source: 'web-dev', target: 'vue' },
+      { source: 'web-dev', target: 'angular' },
+      { source: 'web-dev', target: 'typescript' },
+      { source: 'web-dev', target: 'javascript' },
+      { source: 'backend', target: 'nodejs' },
+      { source: 'backend', target: 'python' },
+      { source: 'database', target: 'mongodb' },
+      { source: 'database', target: 'postgresql' },
+      { source: 'devops', target: 'docker' },
+      { source: 'devops', target: 'kubernetes' },
+      { source: 'devops', target: 'aws' },
+      { source: 'design-ui', target: 'figma' },
+      { source: 'design-ui', target: 'sketch' },
+      { source: 'design-ui', target: 'tailwind' },
+      { source: 'ai-tools', target: 'openai' },
+      { source: 'ai-tools', target: 'claude' },
+      { source: 'ai-tools', target: 'notion' },
+      
+      // Connexions secondaires pour plus de densité
+      { source: 'react', target: 'typescript' },
+      { source: 'nodejs', target: 'mongodb' },
+      { source: 'docker', target: 'aws' },
+      { source: 'figma', target: 'tailwind' },
+      { source: 'github', target: 'vercel' },
+      { source: 'mobile-app', target: 'youtube' },
+      { source: 'marketing', target: 'instagram' },
+      { source: 'backend', target: 'security' },
+      { source: 'database', target: 'testing' }
     ]
   };
 
