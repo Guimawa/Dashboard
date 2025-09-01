@@ -10,49 +10,24 @@ import ModularDashboard from "./components/modular/HandshakeDashboard";
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
+function Home() {
   return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-        
-        {/* Navigation vers le Dashboard Handshake */}
-        <div className="mt-8 space-y-4">
-          <Link 
-            to="/dashboard" 
-            className="block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors text-lg"
-          >
-            🚀 Dashboard Handshake Style
-          </Link>
-          <p className="text-gray-400 text-sm max-w-md">
-            Design identique à Handshake Influence - Gestion projets professionnelle avec graph réseau, métriques et outils IA
-          </p>
-        </div>
-      </header>
+    <div style={{ padding: 20 }}>
+      <h1>Dashboard Options</h1>
+      <div style={{ display: 'flex', gap: 20, marginTop: 20 }}>
+        <Link to="/dashboard" style={{ padding: 10, background: '#007acc', color: 'white', textDecoration: 'none', borderRadius: 5 }}>
+          Modular Dashboard (Recommandé)
+        </Link>
+        <Link to="/clone" style={{ padding: 10, background: '#28a745', color: 'white', textDecoration: 'none', borderRadius: 5 }}>
+          Force Graph Clone
+        </Link>
+        <Link to="/original" style={{ padding: 10, background: '#6c757d', color: 'white', textDecoration: 'none', borderRadius: 5 }}>
+          Original Dashboard
+        </Link>
+      </div>
     </div>
   );
-};
+}
 
 function App() {
   return (
