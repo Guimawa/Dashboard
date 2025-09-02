@@ -1,5 +1,5 @@
 :root{
-  --bg1:#0B1220; --bg2:#050A16; --panel:#0f172a; --muted:#94a3b8; --line:#1f2937;
+  --bg1:#000000; --bg2:#0a0a0a; --panel:#1a1a1a; --muted:#94a3b8; --line:#333333;
   --blue:#60a5fa; --green:#22c55e; --yellow:#fbbf24; --pink:#ff6ad5; --red:#ef4444;
 }
 html,body,#root{height:100%;}
