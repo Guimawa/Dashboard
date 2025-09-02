@@ -33,10 +33,7 @@ export default function HandshakeDashboard(){
       </div>
 
       {/* Right */}
-      <div style={{width:'250px',background:'red', padding:'20px', color:'white'}}>
-        <h3>PANEL DROIT TEST</h3>
-        <p>Si vous voyez ceci, le layout fonctionne !</p>
-      </div>
+      <RightPanel />
     </div>
   )
 }
