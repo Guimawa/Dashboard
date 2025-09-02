@@ -1,0 +1,36 @@
+:root{
+  --bg-main:#1F2128; --bg-panel:#2B2F36; --bg-separator:#3A3F48;
+  --text-primary:#FFFFFF; --text-secondary:#B3B3B3;
+  --accent-positive:#4CAF50; --accent-negative:#E53935; --accent-neutral:#FFC107;
+  --connection-lines:rgba(255,255,255,0.5);
+  --blue:#60a5fa; --green:#22c55e; --yellow:#fbbf24; --pink:#ff6ad5; --red:#ef4444;
+}
+html,body,#root{height:100%;}
+body{margin:0;background:var(--bg-main);color:var(--text-primary);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",sans-serif;}
+*{box-sizing:border-box}
+.panel{background:var(--bg-panel);border:1px solid var(--bg-separator);border-radius:8px;padding:16px;}
+.btn{background:var(--bg-panel);border:1px solid var(--bg-separator);padding:8px 12px;border-radius:4px;color:var(--text-primary);cursor:pointer;font:Inter;font-size:14px;}
+.btn:hover{background:var(--text-primary);color:var(--bg-main)}
+.input{background:var(--bg-panel);border:1px solid var(--bg-separator);color:var(--text-primary);padding:8px 12px;border-radius:4px;outline:none;font:Inter;font-size:14px;}
+.input::placeholder{color:var(--text-secondary)}
+.small{font-size:12px;color:var(--text-secondary)}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:4px 8px;border-radius:999px;background:var(--bg-panel);border:1px solid var(--bg-separator);font-size:12px}
+.row{display:flex;gap:24px;align-items:center}
+.grid{display:grid;gap:16px}
+.glow{box-shadow:0 0 24px rgba(96,165,250,.25), inset 0 0 0 1px rgba(96,165,250,.3)}
+hr.sep{border:0;border-top:1px solid rgba(255,255,255,.08);margin:.5rem 0}
+/* timeline mini-bars */
+.timeline{display:grid;grid-auto-flow:column;gap:6px;align-items:end;height:54px}
+.timeline .bar{width:6px;background:#334155;border-radius:4px}
+.timeline .bar.active{background:#60a5fa}
+/* right panel list */
+.item{display:flex;justify-content:space-between;align-items:center;padding:.5rem .6rem;border-radius:.6rem;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04)}
+.item .left{display:flex;align-items:center;gap:.6rem;min-width:0}
+.item .left .dot{width:8px;height:8px;border-radius:999px;flex:0 0 auto}
+.item .right{font-size:.85rem;color:#cbd5e1}
+/* knobs */
+.slider{accent-color:#60a5fa}
+.toggle{width:34px;height:20px;border-radius:999px;background:#334155;position:relative;border:1px solid rgba(255,255,255,.15)}
+.toggle input{display:none}
+.toggle .knob{position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:999px;background:#e5e7eb;transition:transform .2s}
+.toggle input:checked + .knob{transform:translateX(14px)}

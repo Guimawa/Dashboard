@@ -261,6 +261,6 @@ Votre Dashboard est maintenant :
 - ✅ **PWA native** installable
 - ✅ **Zéro data fictive** - 100% placeholder prêt à remplir
 
-**🔗 Accès live** : https://emptyboard.preview.emergentagent.com/dashboard
+**🔗 Accès live** : https://placeholderdash.preview.emergentagent.com/dashboard
 
 **Le MVP parfait pour commencer, avec une base solide pour scaler ! 🚀**

@@ -1,0 +1,80 @@
+<analysis>
+The previous AI engineer successfully developed a React MVP dashboard application, iteratively refining it based on user feedback. Initially, a basic functional prototype with PWA capabilities was built. The primary phase involved meticulously replicating a Handshake Influence Dashboard design, which required significant UI adjustments including a denser network graph and a specific three-column layout. A critical bug emerged regarding the use of realistic placeholder data instead of strictly generic, empty placeholders. The engineer addressed this by implementing a comprehensive fix: creating  for structured empty data and  for centralized styling, extensively refactoring  to remove all real data, and establishing a dedicated git branch (). The final interaction focused on providing detailed, verifiable proofs of these corrections, including git logs, diffs, file contents, grep tests, and screenshots, confirming a virgin dashboard state.
+</analysis>
+
+<product_requirements>
+The user requested a minimalist digital project management dashboard MVP, mirroring the Handshake Influence design, developed as a light React application to conserve computational resources.
+**UI/UX requirements**: A dark blue/black gradient background, an empty network graph with placeholder bubbles (initially one, evolving to 50+ dense nodes), a Crée un nouveau projet prompt, an empty right-panel ranking, and a top bar with filters (Statut/Date/Outil) and an empty notification bubble. It also includes a responsive hamburger menu for a sliding left sidebar with empty tabs (New Projet, Table Ronde IA, Outils, Vue d'ensemble, Suivi performances) and a hidden sliding taskbar.
+**Technical requirements**: The application must use React with , , , and . It must be PWA-ready with a basic service worker and . Crucially, no real or fictive data should be present; all dynamic content must be empty or generic placeholders.
+**Critical Correction (Bug Fix)**: All previously present realistic data (e.g., specific names, percentages, organizations, technologies) must be replaced by neutral, generic placeholders (e.g., Personne 1, XX.XX%, Organisation A, Titre placeholder).
+**Deliverables for Correction**: Figma file/exports (PNG@2x, SVG for 3 artboards), , , modified files list, git diff/patch, live preview URL, and commit SHA/branch.
+</product_requirements>
+
+<key_technical_concepts>
+-   **Full-stack Architecture**: React (Frontend), FastAPI (Backend), MongoDB (Database).
+-   **Frontend Technologies**: React.js, Tailwind CSS, Framer Motion, , .
+-   **PWA**: Service Worker, .
+-   **State Management**: React Hooks.
+-   **Version Control**: Git (branches, commits, diffs).
+-   **Design System**: Centralized CSS variables (design tokens).
+-   **Data Management**: JSON for structured placeholder data.
+</key_technical_concepts>
+
+<code_architecture>
+The application is a full-stack project with a React frontend and a FastAPI/MongoDB backend. The development so far has focused exclusively on the frontend.
+
+
+
+-   : Manages frontend dependencies.
+    -   **Changes**: Added , ,  for UI enhancements and graph rendering.
+-   : Tailwind CSS configuration.
+    -   **Changes**: Configured custom dark background color and a specific gradient for the dashboard's aesthetic.
+-   : Main HTML file.
+    -   **Changes**: Updated with PWA meta tags and manifest link, enabling PWA functionality.
+-   : PWA manifest file.
+    -   **Changes**: Created for PWA features; metadata later replaced with generic placeholder content to align with the empty data requirement.
+-   : Service worker script.
+    -   **Changes**: Created to provide basic offline caching and PWA readiness.
+-   : React app entry point.
+    -   **Changes**: Incorporated service worker registration logic for PWA.
+-   : Main React component for routing.
+    -   **Changes**: Modified to include a  route, initially rendering , then  for the detailed design.
+-   : Initial basic MVP dashboard component.
+    -   **Changes**: Created as the first iteration. Contains a  placeholder percentage identified in grep.
+-   : The central and most complex component.
+    -   **Changes**: This file underwent extensive modifications. It was initially created for the pixel-perfect 3-column Handshake layout, including the header, network graph, and right panel. Further modified to increase graph density and implement realistic ranking. Critically, it was refactored to remove all hardcoded real data (names, percentages, technologies) and now strictly uses generic placeholders and data from .
+-   , : shadcn/ui components.
+    -   **Changes**: Created to provide consistent foundational UI elements.
+-   : **New file**, containing an empty, structured JSON schema for all dashboard data points.
+    -   **Importance**: Ensures all dynamic data is driven by a predefined empty structure, enforcing the placeholder-only requirement. It provides generic labels and empty values.
+-   : **New file**, for centralized CSS variables (design tokens).
+    -   **Importance**: Standardizes and centralizes styling parameters for colors, gradients, and spacing, improving maintainability and design consistency.
+-   : Utility functions for PWA.
+    -   **Changes**: Created to handle simulated data exports, secure storage, and notifications.
+-   : Project deployment instructions.
+    -   **Changes**: Created and later updated with anonymized examples.
+-   : Documentation detailing the bug fix.
+    -   **Changes**: Created to document the modifications made to implement placeholders.
+</code_architecture>
+
+<pending_tasks>
+-   Provide Figma exports (.fig file, PNG@2x, and SVG for 3 artboards: Global, Focus+Panel, Header). The AI engineer explicitly stated these cannot be generated automatically.
+</pending_tasks>
+
+<current_work>
+The AI engineer has successfully completed a critical bug fix, removing all realistic data from the dashboard and replacing it with generic placeholders, as explicitly requested. This involved significant modifications to  and the creation of  (for an empty data schema) and  (for centralized CSS variables). A live preview URL () was provided, demonstrating a completely virgin interface.
+
+The immediate work just before this summary request was to provide the user with comprehensive, verifiable proofs of these corrections. The AI engineer has provided the following raw text outputs and confirmations:
+-   The last commit SHA:  on .
+-   Git diff (name-only) listing modified files: , , , , , . The full diff was also shown, indicating URL changes and  additions.
+-   The head (first 200 lines) of , confirming generic placeholders like ,  for labels, and  for scores.
+-   The head (first 200 lines) of , confirming centralized CSS variables for colors, gradients, and spacing.
+-   Results from  commands for specific names and percentages, confirming OK: no name matches and no *realistic* percentages in the main source code (only in config/node_modules/CSS/Dashboard.jsx's 0.0%).
+-   A visual confirmation via the provided URL and a description of the screenshots, confirming the dashboard displays only generic placeholders for all elements.
+
+The AI engineer acknowledged that automatic generation of Figma files is not possible.
+</current_work>
+
+<optional_next_step>
+The next step is to inform the user that generating Figma files is not possible and ask how they would like to proceed with the pending Figma exports (PNG@2x and SVG).
+</optional_next_step>

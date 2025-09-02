@@ -1,0 +1,243 @@
+/* ===================================
+   DESIGN TOKENS - DASHBOARD HANDSHAKE STYLE
+   ================================== */
+
+:root {
+  /* === COULEURS PRINCIPALES === */
+  --color-background-primary: #0f172a;
+  --color-background-secondary: #1e293b;
+  --color-background-tertiary: #334155;
+  
+  /* Gradient principal */
+  --gradient-background: linear-gradient(to bottom right, #0f172a, #1e3a8a, #000000);
+  
+  /* === COULEURS GRAPH RÉSEAU === */
+  --color-node-central: #00BFFF;
+  --color-node-1: #10B981;
+  --color-node-2: #F59E0B;
+  --color-node-3: #EF4444;
+  --color-node-4: #8B5CF6;
+  --color-node-5: #06B6D4;
+  --color-node-6: #F97316;
+  --color-node-7: #84CC16;
+  --color-node-8: #EC4899;
+  
+  /* === COULEURS TEXTE === */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #cbd5e1;
+  --color-text-tertiary: #64748b;
+  --color-text-placeholder: #475569;
+  
+  /* === COULEURS STATUS === */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+  --color-neutral: #6b7280;
+  
+  /* === COULEURS UI === */
+  --color-border: #374151;
+  --color-hover: rgba(255, 255, 255, 0.1);
+  --color-active: rgba(59, 130, 246, 0.2);
+  --color-overlay: rgba(0, 0, 0, 0.8);
+  
+  /* === ESPACEMENTS === */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  --spacing-3xl: 4rem;     /* 64px */
+  
+  /* === TAILLES === */
+  --size-header-height: 64px;
+  --size-sidebar-width: 256px;
+  --size-panel-width: 320px;
+  --size-button-height: 40px;
+  --size-input-height: 40px;
+  
+  /* === RAYONS === */
+  --radius-sm: 0.25rem;    /* 4px */
+  --radius-md: 0.5rem;     /* 8px */
+  --radius-lg: 0.75rem;    /* 12px */
+  --radius-xl: 1rem;       /* 16px */
+  --radius-2xl: 1.5rem;    /* 24px */
+  
+  /* === OMBRES === */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  
+  /* === TYPOGRAPHIE === */
+  --font-family-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  --font-family-mono: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+  
+  --font-size-xs: 0.75rem;     /* 12px */
+  --font-size-sm: 0.875rem;    /* 14px */
+  --font-size-md: 1rem;        /* 16px */
+  --font-size-lg: 1.125rem;    /* 18px */
+  --font-size-xl: 1.25rem;     /* 20px */
+  --font-size-2xl: 1.5rem;     /* 24px */
+  --font-size-3xl: 1.875rem;   /* 30px */
+  
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* === ANIMATIONS === */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 250ms ease-in-out;
+  --transition-slow: 350ms ease-in-out;
+  
+  --animation-fade-in: fadeIn 0.3s ease-in-out;
+  --animation-slide-up: slideUp 0.3s ease-out;
+  --animation-slide-left: slideLeft 0.3s ease-out;
+  --animation-scale-in: scaleIn 0.2s ease-out;
+  
+  /* === Z-INDEX === */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+  
+  /* === BREAKPOINTS (pour référence) === */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
+  /* === COMPOSANTS SPÉCIFIQUES === */
+  
+  /* Header */
+  --header-backdrop-blur: blur(12px);
+  --header-border: 1px solid var(--color-border);
+  
+  /* Sidebar */
+  --sidebar-backdrop: rgba(15, 23, 42, 0.95);
+  --sidebar-backdrop-blur: blur(16px);
+  
+  /* Graph Canvas */
+  --graph-background: rgba(0, 0, 0, 0.4);
+  --graph-border: 1px solid rgba(55, 65, 81, 0.5);
+  --graph-link-color: rgba(255, 255, 255, 0.15);
+  --graph-link-width: 1px;
+  
+  /* Cards */
+  --card-background: rgba(0, 0, 0, 0.3);
+  --card-border: 1px solid rgba(55, 65, 81, 0.5);
+  --card-backdrop-blur: blur(8px);
+  
+  /* Buttons */
+  --button-primary-bg: var(--color-info);
+  --button-primary-hover: #2563eb;
+  --button-secondary-bg: transparent;
+  --button-secondary-border: 1px solid var(--color-border);
+  --button-secondary-hover: var(--color-hover);
+  
+  /* Inputs */
+  --input-background: rgba(51, 65, 85, 0.5);
+  --input-border: 1px solid var(--color-border);
+  --input-focus-border: var(--color-info);
+  --input-placeholder: var(--color-text-placeholder);
+  
+  /* Tooltips */
+  --tooltip-background: rgba(0, 0, 0, 0.9);
+  --tooltip-text: var(--color-text-primary);
+  --tooltip-arrow-size: 6px;
+  
+  /* Progress */
+  --progress-background: rgba(55, 65, 81, 0.5);
+  --progress-fill: var(--color-info);
+  --progress-height: 8px;
+  
+  /* Ranking */
+  --ranking-item-hover: rgba(255, 255, 255, 0.05);
+  --ranking-positive: var(--color-success);
+  --ranking-negative: var(--color-error);
+  --ranking-neutral: var(--color-neutral);
+}
+
+/* === ANIMATIONS KEYFRAMES === */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes slideLeft {
+  from { 
+    opacity: 0; 
+    transform: translateX(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0); 
+  }
+}
+
+@keyframes scaleIn {
+  from { 
+    opacity: 0; 
+    transform: scale(0.95); 
+  }
+  to { 
+    opacity: 1; 
+    transform: scale(1); 
+  }
+}
+
+/* === CLASSES UTILITAIRES === */
+.fade-in {
+  animation: var(--animation-fade-in);
+}
+
+.slide-up {
+  animation: var(--animation-slide-up);
+}
+
+.slide-left {
+  animation: var(--animation-slide-left);
+}
+
+.scale-in {
+  animation: var(--animation-scale-in);
+}
+
+.backdrop-blur {
+  backdrop-filter: var(--header-backdrop-blur);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-text-primary), var(--color-text-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* === RESPONSIVE HELPERS === */
+@media (max-width: 768px) {
+  :root {
+    --size-sidebar-width: 280px;
+    --size-panel-width: 100%;
+    --spacing-md: 0.75rem;
+    --spacing-lg: 1rem;
+  }
+}
