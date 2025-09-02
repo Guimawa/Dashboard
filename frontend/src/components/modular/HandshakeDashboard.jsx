@@ -9,9 +9,9 @@ export default function HandshakeDashboard(){
   const [selection,setSelection]=useState(null)
 
   return (
-    <div style={{height:'100vh',display:'grid',gridTemplateColumns:'200px 1fr 250px',gridTemplateRows:'auto 1fr auto',overflow:'hidden'}}>
+    <div style={{height:'100vh',display:'flex'}}>
       {/* Sidebar (static placeholders) */}
-      <aside style={{borderRight:'1px solid rgba(255,255,255,.08)',background:'rgba(255,255,255,.04)'}}>
+      <aside style={{width:'200px',borderRight:'1px solid rgba(255,255,255,.08)',background:'rgba(255,255,255,.04)'}}>
         <div style={{padding:14}}>
           <div style={{fontWeight:600}}>Dashboard</div>
           <div className="grid" style={{marginTop:12}}>
@@ -24,7 +24,7 @@ export default function HandshakeDashboard(){
       </aside>
 
       {/* Main column */}
-      <div style={{display:'grid',gridTemplateRows:'auto 1fr auto',gap:8}}>
+      <div style={{flex:'1',display:'grid',gridTemplateRows:'auto 1fr auto',gap:8}}>
         <TopBar onSearch={setQuery}/>
         <div style={{position:'relative'}}>
           <NetworkGraph onSelect={setSelection} />
@@ -33,7 +33,7 @@ export default function HandshakeDashboard(){
       </div>
 
       {/* Right */}
-      <div style={{background:'red', padding:'20px', color:'white'}}>
+      <div style={{width:'250px',background:'red', padding:'20px', color:'white'}}>
         <h3>PANEL DROIT TEST</h3>
         <p>Si vous voyez ceci, le layout fonctionne !</p>
       </div>
