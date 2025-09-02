@@ -30,6 +30,13 @@ function Home() {
 }
 
 function testBackend() {
+  // Désactivé temporairement pour éviter les erreurs 404
+  console.log("🔧 Backend test désactivé - Mode développement");
+  console.log("Backend URL:", BACKEND_URL);
+  console.log("API URL:", API);
+  
+  // Uncomment when backend is ready:
+  /*
   axios
     .get(`${API}/health`)
     .then((response) => {
@@ -47,6 +54,7 @@ function testBackend() {
         console.log("Request setup error:", error.message);
       }
     });
+  */
 }
 
 function App() {
