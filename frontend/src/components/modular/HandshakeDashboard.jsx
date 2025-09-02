@@ -34,11 +34,10 @@ export default function HandshakeDashboard(){
         </div>
       </div>
 
-      {/* Right Panel - FORCER LA VISIBILITÉ */}
+      {/* Right Panel - FORCER LA VISIBILITÉ */}  
       <div style={{width:'280px',minWidth:'280px',borderLeft:'1px solid rgba(255,255,255,.08)',background:'rgba(255,255,255,.04)'}}>
         <RightPanel />
       </div>
-    </div>
     </div>
   )
 }
