@@ -10,7 +10,7 @@ export default function RightPanel(){
   const events = common.map((x,i)=>({...x,name:'Événement '+(i+1), dot:'#fbbf24'}))
   const list = tab==='influencers'?influencers : tab==='topics'?topics : events
   return (
-    <aside style={{width:'100%',display:'flex',flexDirection:'column',gap:10,background:'rgba(255,0,0,0.2)',border:'2px solid red',padding:'10px'}}>
+    <aside style={{width:'250px',display:'flex',flexDirection:'column',gap:10}}>
       <div className="panel" style={{padding:12}}>
         <div className="row" style={{justifyContent:'space-between'}}>
           <strong>Classement</strong>
