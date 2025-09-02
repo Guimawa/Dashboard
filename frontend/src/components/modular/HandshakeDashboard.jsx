@@ -9,9 +9,9 @@ export default function HandshakeDashboard(){
   const [selection,setSelection]=useState(null)
 
   return (
-    <div style={{height:'100vh',display:'flex'}}>
+    <div style={{height:'100vh',display:'flex',overflow:'hidden'}}>
       {/* Sidebar (static placeholders) */}
-      <aside style={{width:'200px',borderRight:'1px solid rgba(255,255,255,.08)',background:'rgba(255,255,255,.04)'}}>
+      <aside style={{width:'180px',minWidth:'180px',borderRight:'1px solid rgba(255,255,255,.08)',background:'rgba(255,255,255,.04)'}}>
         <div style={{padding:14}}>
           <div style={{fontWeight:600}}>Dashboard</div>
           <div className="grid" style={{marginTop:12}}>
@@ -24,16 +24,21 @@ export default function HandshakeDashboard(){
       </aside>
 
       {/* Main column */}
-      <div style={{flex:'1',display:'grid',gridTemplateRows:'auto 1fr auto',gap:8}}>
+      <div style={{flex:'1',display:'flex',flexDirection:'column',minWidth:0}}>
         <TopBar onSearch={setQuery}/>
-        <div style={{position:'relative'}}>
+        <div style={{flex:1,position:'relative',minHeight:0}}>
           <NetworkGraph onSelect={setSelection} />
         </div>
-        <BottomTimeline />
+        <div style={{height:'100px',minHeight:'100px'}}>
+          <BottomTimeline />
+        </div>
       </div>
 
-      {/* Right */}
-      <RightPanel />
+      {/* Right Panel - FORCER LA VISIBILITÉ */}
+      <div style={{width:'280px',minWidth:'280px',borderLeft:'1px solid rgba(255,255,255,.08)',background:'rgba(255,255,255,.04)'}}>
+        <RightPanel />
+      </div>
+    </div>
     </div>
   )
 }
